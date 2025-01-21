@@ -1,0 +1,43 @@
+1. Definitions of Matrices and Vectors
+    * A matrix is an arrange ment of numbers in rectangular form 
+    * a J x K matrix has J rows and K columns
+    * a Square matrix is of order (2,2) as a special case
+    * Vectors are subcategories of Matrices that have either one row or one column 
+        - (1,k) is one row, and multiple column, a = [1,2,3]
+    * A matrix with one row and one colum is the same as a scalar a = 5 === a = [5] 
+
+2. Addition, Subtraction, Multiplication
+    * A + B = C 
+    * A + B == B + A 
+    * (A + B) + C = A + (B + C)
+    * Transposition 
+        An order (j,j) matrix is said to be symmetric if A == AT 
+
+        (AT)T == A
+
+        (KA)T == KAT
+
+        (A + B)T == AT + BT
+
+        KA = K(A1,A2,A3) = (KA1,KA2,KA3)
+
+        1/2A = (1/2A1,1/2A2,1/2A3)
+
+    * Given A of order (m,n) and  B of order (n,r), 
+        C = A * B is of order (m, r) = [Cij] = \sum_{k=1}^{n} Aik * Bkj, where i = 1,2,3,...,m and j = 1,2,3,...,r
+
+        eg. A = [2,1,3;4,1,6], B = [3,-2;2,4;1,-3]
+        C = A * B = [2*3 + 1*2 + 3*1, 2*-2 + 1*4 + 3*-3; 4*3 + 1*2 + 6*1, 4*-2 + 1*4 + 6*-3] 
+        
+
+
+3. Diagonal and Identity Matrices
+4. Determinant and Eigenstructure
+5. Inverses and Singularity
+6. Systems of Equations
+7. Singular Value Decomposition (SVD)
+8. Spectral Decomposition
+9. Properties and Derivations of Matrix Traces
+10. Projection and Isometry
+11. Variance-Covariance Matrix
+12. Multivariate Normal Distribution
