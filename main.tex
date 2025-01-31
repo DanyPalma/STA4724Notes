@@ -258,7 +258,46 @@ Multiplying $Ax = b$ by $A^{-1}$ gives $A^{-1}Ax = A^{-1}b \Rightarrow x = A^{-1
 
 If the determinant of $A$ is non-zero, then $A^{-1}$ exists, thus it is invertible. 
 
+\bigskip
+\bigskip
+\bigskip
+
+I also dont know what she wrote for this sorry guys 
+
 \section{Systems of Equations}
+
+\paragraph{Systems of linear equations.} 
+
+A system of $K$ linear equations in $L$ unknown variables is a set of equations of the form:
+
+\begin{align*}
+    a_{11}x_1 + a_{12}x_2 + ... + a_{1L}x_L &= b_1 \\
+    a_{21}x_1 + a_{22}x_2 + ... + a_{2L}x_L &= b_2 \\
+    ... \\
+    a_{K1}x_1 + a_{K2}x_2 + ... + a_{KL}x_L &= b_K
+\end{align*}
+
+and can be represented by the matrix equation $Ax = b$ where $A$ is a $K \times L$ matrix, $x$ is a $L \times 1$ vector, and $b$ is a $K \times 1$ vector.
+
+\begin{definition}
+    An Augmented Matrix is a matrix obtained by appending the columns of two matrices that have the same number of rows.
+\end{definition}
+
+Let $A$ be a $K \times L$ matrix, $B$ is a $K \times M$ matrix. The augmented matrix of $A$ and $B$ is denoted by $[A|B]$ and is a $K \times (L+M)$ matrix. and is obtained by appending the columns of $B$ to the right of $A$. 
+
+\paragraph{Homogeneous System} 
+
+The vector of constants on the right-hand side of the equation is zero. $Ax = 0$
+
+\paragraph{Non-Homogeneous System}
+
+The vector of constants on the right-hand side of the equation is not zero. $Ax = b$
+
+By elementary row operations, a non-Homogeneous system can be transformed into an $Rx = b_R$ where the coefficient matrix $R$ is in row echelon form. If $R$ has a zero row $R_i$ with $b_{Ri} \neq 0$, then the system has no solution. 
+
+\paragraph{Partitioned System}
+
+Suppose that we have a $K \times L$ row ecehlon form matrix $R$ with $r$ basic columns and the last $L - r$ columns are non-basic. Partition the matrix into two blocks $R = [B~~N]$ where $B$ is a $K \times r$ matrix and $N$ is a $K \times (L-r)$ matrix, Similarly partition the vector of variables into two blocks $x = [x_B~~x_N]$ where $x_B$ is a $r \times 1$ vector and $x_N$ is a $(L-r) \times 1$ vector.
 
 \section{Singular Value Decomposition (SVD)}
 
