@@ -347,11 +347,42 @@ Let $A$ be a square $n \times n$ matrix $(\lambda_i, v_i)$.
 
 \paragraph{Cholesky Decomposition} 
 
+$$A = VA^{\frac{1}{2}}(VA^{\frac{1}{2}})^T, A^{\frac{1}{2}} = diag(\lambda_1^{\frac{1}{2}},...,\lambda_n^{\frac{1}{2}}) = LL^*$$
 
+$$A_{tv} = \sum_{u=1}^k L_{tu}(L^*)_{uv} = \sum_{u=1}^k L_{tu}L_{vu}$$
+
+i didnt get the rest
 
 
 
 \section{Properties and Derivations of Matrix Traces}
+
+\paragraph{Vector Norms}
+
+For any vector $x \in \mathbb{R}^n$, the $l_2$ norm of $x$ is given by $$||x||_2 = \sqrt{\sum_{i=1}^n x_i^2}$$
+
+\paragraph{Inner Product}
+
+for any $x = \begin{bmatrix}
+    x_1 \\ x_2
+\end{bmatrix}$ and $y = \begin{bmatrix}
+    y_1 \\ y_2
+\end{bmatrix}$, the angle $\theta$ can be computed by $$\cos(\theta) = \frac{x_1y_1 + x_2y_2}{\sqrt{x_1^2x_2^2}\sqrt{y_1^2y_2^2}}$$
+
+let $\langle x,y \rangle$ be the inner product of $x$ and $y$, then $$\langle x,y \rangle = x^Ty$$ where $$\langle x,y \rangle = \sum_{i=1}^m\sum_{j=1}^nx_{ij}y_{ij}$$
+
+\paragraph{Matrix Trace}
+
+For any square matrix $x \in \mathbb{R}^{n\times n}$, the matrix trace $tr()$ is the sum of the diagonal entries of $$tr(x) = \sum_{i=1}^n x_{ii}$$ where $x_{ii}, \forall i \in [n]$ is the (i,i)-th entry of $x$. Thus, $tr(x) = tr(x^T)$
+
+\paragraph{Properties of Matrix Trace}
+
+\begin{itemize}
+    \item $tr(x+y) = tr(x) + tr(y)$
+    \item $tr(\alpha x + \beta y) = \alpha tr(x) + \beta tr(y)$
+    \item $tr(xy) = tr(yx)$
+    \item $tr(x^Tx) = ||x||^2_F$
+\end{itemize}
 
 \section{Projection and Isometry}
 
