@@ -27,6 +27,23 @@
 
 \maketitle
 \newpage
+
+\vspace*{\fill}
+
+\begin{center}
+    \textbf{Course Update on February 6th, 2025}
+\end{center}
+
+Dr. Tomova spoke with Dr. Ding, and had a discussion about the course. there needed to be a change but they all agreed to NOT change the course in the middle of the semester.
+
+They agreed to figure out how to balance the pre-requisites, based on the name the course should include a lot of concepts of linear algebra, however they dont want it to become a barrier for students currently taking the course (they want students to keep attending) so they will be currently making it similar to previous semesters, consistent with the syllabus and include more practical applications, and less conceptual theory moving forward.
+
+The last three topics, 10-12 (Projection and Isometry, Variance-Covariance Matrix, and Multivariate Normal Distribution) are not going to be covered and will be optional. today we're finishing up 8-9 (spectral decomposition, Properties and Derivations of Matrix Traces). The following homeworks and exams will not have any proof questions
+
+\vspace*{\fill}
+
+\newpage
+
 \tableofcontents
 \newpage
 
@@ -301,7 +318,38 @@ Suppose that we have a $K \times L$ row ecehlon form matrix $R$ with $r$ basic c
 
 \section{Singular Value Decomposition (SVD)}
 
+\paragraph{Calculation}
+The columns of $u$ are the eigenvectors corresponding to the nonzero values of $MM^T$ 
+
+I did not get the rest of these notes
+
+\begin{proof}
+    Since $MM^T = (u\Sigma v^t)\cdot(v \Sigma u^T)$ 
+\end{proof}
+
 \section{Spectral Decomposition}
+
+\paragraph{Calculation}
+
+Let $A$ be a square $n \times n$ matrix $(\lambda_i, v_i)$.
+
+\begin{align*}
+    A = \begin{bmatrix}
+        v_1 & v_2 & ... & v_n
+    \end{bmatrix} \begin{bmatrix}
+        \lambda_1 & 0 & ... & 0 \\
+        0 & \lambda_2 & ... & 0 \\
+        ... & ... & ... & ... \\
+        0 & 0 & ... & \lambda_n
+    \end{bmatrix} \begin{bmatrix}
+        v_1 \\ v_2 \\ ... \\ v_n \end{bmatrix} = \sum_{i=1}^{n} \lambda_i v_i v_i^T
+\end{align*}
+
+\paragraph{Cholesky Decomposition} 
+
+
+
+
 
 \section{Properties and Derivations of Matrix Traces}
 
