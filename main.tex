@@ -54,8 +54,9 @@ The last three topics, 10-12 (Projection and Isometry, Variance-Covariance Matri
 % \begin{proof}
 %     Proof goes here.
 % \end{proof}
+\section{Matrix Algebra}
 
-\section{Definitions of Matrices and Vectors}
+\subsection{Definitions of Matrices and Vectors}
 
 \paragraph{Matrix}
 \begin{itemize}
@@ -70,7 +71,7 @@ The last three topics, 10-12 (Projection and Isometry, Variance-Covariance Matri
     \end{bmatrix}$
 \end{itemize}
 
-\section{Addition, Subtraction, Multiplication}
+\subsection{Addition, Subtraction, Multiplication}
 
 \begin{itemize}
     \item $A + B = C$
@@ -128,7 +129,7 @@ An order $(j,j)$ matrix is said to be symmetric if $A = A^T$
     \item $A^n \Leftrightarrow A_0 \cdot A_1 \cdot ... \cdot A_{n-1}$
 \end{itemize}
 
-\section{Diagonal and Identity Matrices}
+\subsection{Diagonal and Identity Matrices}
 
 \paragraph{Diagonal matrix}
 A diagonal matrix is a square matrix with zero entries except possible on the main diagonal
@@ -203,7 +204,7 @@ The identity matrix is a square matrix, consisting of ones along the diagonal an
 \paragraph{Zero Matrix}
 a zero matrix consists of all zero elements.
 
-\section{Determinant and Eigenstructure}
+\subsection{Determinant and Eigenstructure}
 
 \paragraph{Determinant}
 Determinants are defined only for square matrices and scalars.
@@ -265,7 +266,7 @@ Let $A$ be a $k \times k$ matrix, $\lambda_k$ be one of the eigenvalues of $A$ a
 
 I dont understand anything she wrote after this so sorry that there isnt anything here
 
-\section{Inverses and Singularity}
+\subsection{Inverses and Singularity}
 
 Suppose $A$ is a square matrix. we look for an Inverse Matrix, $A^{-1}$ of the same size, such that $AA^{-1} \Rightarrow 1$ (does nothing to a vector) 
 
@@ -281,7 +282,7 @@ If the determinant of $A$ is non-zero, then $A^{-1}$ exists, thus it is invertib
 
 I also dont know what she wrote for this sorry guys 
 
-\section{Systems of Equations}
+\subsection{Systems of Equations}
 
 \paragraph{Systems of linear equations.} 
 
@@ -316,7 +317,7 @@ By elementary row operations, a non-Homogeneous system can be transformed into a
 
 Suppose that we have a $K \times L$ row ecehlon form matrix $R$ with $r$ basic columns and the last $L - r$ columns are non-basic. Partition the matrix into two blocks $R = [B~~N]$ where $B$ is a $K \times r$ matrix and $N$ is a $K \times (L-r)$ matrix, Similarly partition the vector of variables into two blocks $x = [x_B~~x_N]$ where $x_B$ is a $r \times 1$ vector and $x_N$ is a $(L-r) \times 1$ vector.
 
-\section{Singular Value Decomposition (SVD)}
+\subsection{Singular Value Decomposition (SVD)}
 
 \paragraph{Calculation}
 The columns of $u$ are the eigenvectors corresponding to the nonzero values of $MM^T$ 
@@ -327,7 +328,7 @@ I did not get the rest of these notes
     Since $MM^T = (u\Sigma v^t)\cdot(v \Sigma u^T)$ 
 \end{proof}
 
-\section{Spectral Decomposition}
+\subsection{Spectral Decomposition}
 
 \paragraph{Calculation}
 
@@ -355,7 +356,7 @@ i didnt get the rest
 
 
 
-\section{Properties and Derivations of Matrix Traces}
+\subsection{Properties and Derivations of Matrix Traces}
 
 \paragraph{Vector Norms}
 
@@ -384,11 +385,21 @@ For any square matrix $x \in \mathbb{R}^{n\times n}$, the matrix trace $tr()$ is
     \item $tr(x^Tx) = ||x||^2_F$
 \end{itemize}
 
-\section{Projection and Isometry}
+\subsection{Projection and Isometry}
 
-\section{Variance-Covariance Matrix}
+OPTIONAL - SKIPPED
 
-\section{Multivariate Normal Distribution}
+\subsection{Variance-Covariance Matrix}
+
+OPTIONAL - SKIPPED
+
+\subsection{Multivariate Normal Distribution}
+
+OPTIONAL - SKIPPED
+
+\section{Machine Learning}
+
+
 
 
 
