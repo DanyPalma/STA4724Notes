@@ -422,6 +422,73 @@ is a subset of Machine Learning (ML) that specifically utilizes artificial neura
 
 The Observed Input-Output mapping 
 
+\subsection{Two-Layer Neural Networks}
+
+\paragraph{The Basic problem}
+
+$$\{(y_i, x_i)\}_{i \leq i\leq n}, iid $$
+
+joint distribution $\mathbb{P}$
+
+Without a loss of generality, we can describe the relationship between $y$ and $x$ as $$y_i = f(x_i) + z_i$$
+
+\begin{example}
+    Fitting a polynomial of degree k. 
+    $$\hat{f}(x, \theta) = \Sigma_{\alpha: |\alpha| \leq k}  \quad \theta_{\alpha_1}, ... , \alpha_d x_1^{\alpha_1}, ... , x_d^{\alpha_d}, |\alpha| = \Sigma_{i \leq d} \alpha_i$$
+
+    $$R(\theta) = E\{[f(x)-\hat f(x, \theta)]^2\} + \sigma^2 = E\{[y - \hat f(x, \theta)]^2\}$$
+
+    $$\hat R_n(\theta) = \frac{1}{n} \sum_{i=1}^{n}[y_i - \hat f(x_i, \theta)]^2$$
+\end{example}
+
+\paragraph{Simple neural network model}
+
+$$\hat f(x, \theta) = \frac{1}{n}\sum_{i=1}^{n} \sigma_*(x, \theta_i)$$
+
+where
+$$
+\begin{cases}
+    N: \text{ Number of hidden units (neurons) }  \\
+    \sigma_*: \mathbb{R^d} \times \mathbb{R^D} \to \mathbb{R} \text{ is an activation function. } \\
+    \theta_i \in \mathbb{R^D} \text{ are the parameters of the model. } \theta = (\theta_1, ... , \theta_n)
+\end{cases}
+$$
+
+\begin{example}
+    Sigmoid function $\sigma(x) = \frac{1}{1 + e^{-2x}}$
+
+    Rectified Linear Unit $\sigma(x) = max(x, 0)$
+\end{example}
+
+\begin{theorem}
+    Assume $E(f(x)^2) < \infty$. and assume 
+    $\sigma: \mathbb{R} \to \mathbb{R}$ is continuous with $\lim_{x \to \infty} \sigma(x) \to 1$. $\lim_{x \to -\infty}\sigma(x) \to 0$. Then, for any $\epsilon$, there exists $N = N(\epsilon)$
+
+    $$inf_{(a_i, b_i, w_i)}E\{[f(x) - \frac{1}{n}\sum_{i=1}^{n}\sigma(\langle w_i, x \rangle + b_i)]\} \leq \epsilon$$
+\end{theorem}
+
+\begin{proof}
+    SKIPPED
+\end{proof}
+
+\begin{theorem}
+    Let $$f(x) = \int e^{i\langle w, z \rangle}F(w)\mathrm{d}w$$
+
+    $$\sigma: \mathbb{R} \to \mathbb{R} \text{ with} \lim_{t \to \infty}\sigma(t) = 1, \lim_{t \to -\infty} \sigma(t) = 0$$
+
+    \textnormal{ There exists a network of the form }
+
+    $$\mathcal{L} = \int \frac{1}{n}\Sigma\alpha_i\sigma(\langle w, x \rangle + b_i): n \in \mathbb{N}, \alpha_i, b_i \in \mathbb{R}, w_i \in \mathbb{R}^D$$
+
+    \textnormal{ with } $$N(\epsilon) = \frac{1}{\epsilon}(2r \int ||w||_2 |F(w)|dw)^2$$ \textnormal{ achieving error } $$E\{[f(x) - \mathcal{L}(x)]^2\} \leq \epsilon$$
+\end{theorem}
+
+\paragraph{Stochastic Gradient Descent}
+
+Goal: minimize $R(\theta)$
+
+Algorithm: $\theta^{k+1} = \theta^k + s_kv_k$ where $S_k$ is the step size and $v_k$ is the direction of the descent, $n_k = -\nabla R(\theta^k), v_k = - \nabla R(\theta^k) + Z^k$
+
 
 
 
